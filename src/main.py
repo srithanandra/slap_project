@@ -1,6 +1,6 @@
 import ai_controller
 
-MODEL_PATH = 'src//model_5_13.pt'
+MODEL_PATH = 'src//model_5_22.pt'
 
 def main():
     controller = ai_controller.ModelController(MODEL_PATH)

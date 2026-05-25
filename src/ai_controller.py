@@ -28,6 +28,9 @@ class ModelController:
         try:
             self.device = torch.device('cpu')
             checkpoint = torch.load(model_path, map_location=self.device)
+            # print(checkpoint.keys())
+            # for k, v in checkpoint["actor_state_dict"].items():
+            #     print(f"{k}: {v.shape}")
             if not isinstance(checkpoint, dict) or 'actor_state_dict' not in checkpoint:
                 raise ValueError('Expected an Isaac Lab / rsl_rl checkpoint with actor_state_dict.')
 
